@@ -1,0 +1,21 @@
+PODS:
+  - Colours (5.3.0)
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - SDAutoLayout (2.1.1)
+  - SVProgressHUD (1.1.3)
+
+DEPENDENCIES:
+  - Colours (~> 5.3.0)
+  - FMDB (~> 2.6.2)
+  - SDAutoLayout
+  - SVProgressHUD (~> 1.0)
+
+SPEC CHECKSUMS:
+  Colours: d37080ae1b4b7ea7d88e999a3557b4b8e7f90dd1
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  SDAutoLayout: c18678b6ae28c67d89cb132e770cfbac9ee20d25
+  SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
+
+COCOAPODS: 0.39.0

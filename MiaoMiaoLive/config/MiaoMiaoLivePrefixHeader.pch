@@ -1,0 +1,46 @@
+//
+//  MiaoMiaoLivePrefixHeader.pch
+//  MiaoMiaoLive
+//
+//  Created by 金晓浩 on 16/5/28.
+//  Copyright © 2016年 XiaoHaoJin. All rights reserved.
+//
+
+#ifndef MiaoMiaoLivePrefixHeader_pch
+#define MiaoMiaoLivePrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef __OBJC__
+
+// 宏定义
+#import "APPMacro.h"
+#import "VendorMacro.h"
+
+// SDAutoLayout
+#import "UIView+SDAutoLayout.h"
+#import "UITableView+SDAutoTableViewCellHeight.h"
+
+// 讯飞
+#import <iflyMSC/iflyMSC.h>
+#import "ISRDataHelper.h"
+// 网络
+
+// 数据模型
+
+// 类别
+#import "UIColor+Helper.h"
+// 刷新
+
+// Loading
+
+// 提示框
+#import "JJAlertView.h"
+#import "JJToastView.h"
+// 友盟
+
+#endif
+
+
+#endif /* MiaoMiaoLivePrefixHeader_pch */

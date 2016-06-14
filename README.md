@@ -1,2 +1,2 @@
 # MiaoMiaoLive
-一个记账软件
+一个基于FMDB的记账软件
