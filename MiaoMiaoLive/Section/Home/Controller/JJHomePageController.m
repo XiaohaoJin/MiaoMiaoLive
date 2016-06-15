@@ -1,8 +1,8 @@
 //
 //  JJHomePageController.m
-//  MiaoMiaoLiveShow
+//  MiaoMiaoLive
 //
-//  Created by 金晓浩 on 16/5/28.
+//  Created by 金晓浩 on 16/6/15.
 //  Copyright © 2016年 XiaoHaoJin. All rights reserved.
 //
 
@@ -24,10 +24,11 @@
 @interface JJHomePageController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UIButton * leftNavBtn;
+@property (nonatomic, strong) JJSideBarController *sideBarVC;
 @property (nonatomic, strong) UIView *backgroundHideView;
 
-@property (nonatomic, strong) UITableView * tableView;
-@property (nonatomic, strong) UIView * tableHeadView;
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) UIView *tableHeadView;
 @property (nonatomic, strong) UIImageView *shadowView;
 @property (nonatomic, strong) NSMutableArray *dataArray;
 @property (nonatomic, strong) NSMutableArray *dataNameArray;
@@ -362,7 +363,7 @@
 }
 
 // 获取根视图
-- (UIViewController *)getCurrentVC
+- (UIViewController *)getRootController
 {
     return [[UIApplication sharedApplication] keyWindow].rootViewController;
 }
@@ -371,32 +372,35 @@
 
 - (void)leftNavBtnAction
 {
-    JJSideBarController *barVC = [[JJSideBarController alloc] init];
-    barVC.view.backgroundColor = [UIColor redColor];
+    _sideBarVC = [[JJSideBarController alloc] init];
+    _sideBarVC.view.backgroundColor = [UIColor redColor];
     
     UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
-    UIViewController * vc = [self getCurrentVC];
-    [keyWindow insertSubview:barVC.view belowSubview:vc.view];
+    UIViewController *vc = [self getRootController];
+    _sideBarVC.view.alpha = 0;
+    [keyWindow insertSubview:_sideBarVC.view belowSubview:vc.view];
+    
     [UIView animateWithDuration:0.7 animations:^{
-        
+        _sideBarVC.view.alpha = 1;
         vc.view.frame = CGRectMake(ScreenWidth - 60, 0, ScreenWidth, ScreenHeight);
         self.shadowView.frame = CGRectMake(ScreenWidth - 70, 0, 10, ScreenHeight);
-    }
-    completion:^(BOOL finished) {
+    } completion:^(BOOL finished) {
          [keyWindow addSubview:self.backgroundHideView];
     }];
 }
 
 - (void)hideJJSideRemoveSupView
 {
-    UIViewController * vc = [self getCurrentVC];
+    UIViewController * vc = [self getRootController];
     [self.backgroundHideView removeFromSuperview];
+    
     [UIView animateWithDuration:0.7 animations:^{
-        
+        self.sideBarVC.view.alpha = 0;
         vc.view.frame = CGRectMake(0, 0, ScreenWidth, ScreenHeight);
         self.shadowView.frame = CGRectMake(-10, 0, 10, ScreenHeight);
     } completion:^(BOOL finished) {
-
+        [self.sideBarVC.view removeFromSuperview];
+        self.sideBarVC = nil;
     }];
 
 }

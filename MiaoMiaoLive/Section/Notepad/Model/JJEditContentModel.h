@@ -1,13 +1,15 @@
 //
-//  JJHomeBillTypeManagerController.h
+//  JJEditContentModel.h
 //  MiaoMiaoLive
 //
 //  Created by 金晓浩 on 16/6/15.
 //  Copyright © 2016年 XiaoHaoJin. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "JJFMDBModel.h"
 
-@interface JJHomeBillTypeManagerController : UIViewController
+@interface JJEditContentModel : JJFMDBModel
+
+
 
 @end

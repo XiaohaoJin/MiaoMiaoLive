@@ -1,5 +1,5 @@
 //
-//  JJHomeBillTypeManagerController.h
+//  JJNotepadController.h
 //  MiaoMiaoLive
 //
 //  Created by 金晓浩 on 16/6/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JJHomeBillTypeManagerController : UIViewController
+@interface JJNotepadController : UIViewController
 
 @end

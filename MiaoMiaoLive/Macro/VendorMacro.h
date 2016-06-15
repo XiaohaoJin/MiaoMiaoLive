@@ -12,6 +12,6 @@
 #define DANAME_HomeBillTypeFilePathName     @"HomeBillTypeFMDB.sqlite"
 #define DANAME_HomeBillTypeTabelName        @"HomeBillTypeTabel"
 
-#define APPID_VALUE                         @"574efd1c"
+#define IFLY_APPID                          @"574efd1c"
 
 #endif /* VendorMacro_h */

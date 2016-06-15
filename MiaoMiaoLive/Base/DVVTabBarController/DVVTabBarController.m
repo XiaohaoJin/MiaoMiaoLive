@@ -72,15 +72,15 @@
     
 //    self.backgroundImage = [UIImage imageNamed:@"tabBar_background"];
     
-    self.iconNormalArray = @[ @"ic_tab_home", @"ic_tab_voice" ];
+    self.iconNormalArray = @[ @"ic_tab_home", @"ic_tab_home", @"ic_tab_voice" ];
     
-    self.iconSelectedArray = @[ @"ic_tab_home",@"ic_tab_voice" ];
+    self.iconSelectedArray = @[ @"ic_tab_home", @"ic_tab_home", @"ic_tab_voice" ];
     
-    self.itemBackgroundNormalArray = @[ @"", @"" ];
+    self.itemBackgroundNormalArray = @[ @"", @"", @"" ];
     
-    self.itembackgroundSelectedArray = @[ @"", @"" ];
+    self.itembackgroundSelectedArray = @[ @"", @"", @"" ];
     
-    self.titleArray = @[ @"首页",@"语音" ];
+    self.titleArray = @[ @"首页", @"Notepad",@"语音" ];
     
     CGRect rect = self.tabBar.bounds;
     // 高度需要+1，否则会出现底部tabBar的白色背景（会显示出来一条白线）

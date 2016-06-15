@@ -9,14 +9,17 @@
 #import "AppDelegate.h"
 #import "JJHomePageController.h"
 #import "JJGameController.h"
+#import "JJNotepadController.h"
 
 @interface AppDelegate ()
 
 @property (nonatomic, strong) JJHomePageController *homeVC;
 @property (nonatomic, strong) JJGameController *gameVC;
+@property (nonatomic, strong) JJNotepadController *notepadVC;
 
 @property (nonatomic, strong) UINavigationController *homeNaviVC;
 @property (nonatomic, strong) UINavigationController *gameNaviVC;
+@property (nonatomic, strong) UINavigationController *notepadNaviVC;
 
 
 @end
@@ -26,7 +29,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     /** 科大讯飞 */
-    NSString *initString = [[NSString alloc] initWithFormat:@"appid=%@",APPID_VALUE];
+    NSString *initString = [[NSString alloc] initWithFormat:@"appid=%@",IFLY_APPID];
     [IFlySpeechUtility createUtility:initString];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -38,9 +41,12 @@
     self.gameVC = [[JJGameController alloc] init];
     self.gameNaviVC= [[UINavigationController alloc] initWithRootViewController:self.gameVC];
     
+    self.notepadVC = [[JJNotepadController alloc] init];
+    self.notepadNaviVC = [[UINavigationController alloc] initWithRootViewController:self.notepadVC];
+    
     
     self.mainTabBarVC = [[DVVTabBarController alloc] init];
-    self.mainTabBarVC.viewControllers = @[ self.homeNaviVC, self.gameNaviVC ];
+    self.mainTabBarVC.viewControllers = @[ self.homeNaviVC, self.notepadNaviVC, self.gameNaviVC ];
     
     self.window.rootViewController = self.mainTabBarVC;
     [self.window makeKeyAndVisible];

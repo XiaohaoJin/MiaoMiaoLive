@@ -1,8 +1,8 @@
 //
 //  JJHomePageController.h
-//  MiaoMiaoLiveShow
+//  MiaoMiaoLive
 //
-//  Created by 金晓浩 on 16/5/28.
+//  Created by 金晓浩 on 16/6/15.
 //  Copyright © 2016年 XiaoHaoJin. All rights reserved.
 //
 
