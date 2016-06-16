@@ -36,6 +36,14 @@
     if (_titleText.text.length != 0 && _contentText.text.length != 0)
     {
       
+        if (_saveBlock)
+        {
+            NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+            [formatter setDateFormat:@"yyyy.MM.dd hh.mm.ss"];
+            NSString *dateTime = [formatter stringFromDate:[NSDate date]];
+            
+            _saveBlock(_titleText.text, _contentText.text, dateTime);
+        }
 
         
     }

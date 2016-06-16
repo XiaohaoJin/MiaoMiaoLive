@@ -15,6 +15,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self)
     {
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
         [self.contentView addSubview:self.nameLabel];
         [self.contentView addSubview:self.typeImg];
         [self.contentView addSubview:self.moneyLabel];

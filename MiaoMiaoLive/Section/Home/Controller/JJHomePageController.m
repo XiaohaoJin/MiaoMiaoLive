@@ -442,6 +442,7 @@
         tableView.delegate = self;
         tableView.dataSource = self;
         tableView.tableHeaderView = self.tableHeadView;
+        tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         
         _tableView = tableView;
     }
@@ -454,7 +455,6 @@
     {
         _tableHeadView = [UIView new];
         _tableHeadView.frame = CGRectMake(0, 0, ScreenWidth, TableHeadViewHeight);
-        _tableHeadView.backgroundColor = [UIColor yellowColor];
 
     }
     return _tableHeadView;

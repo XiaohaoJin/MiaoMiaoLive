@@ -9,11 +9,17 @@
 #import "JJNotepadController.h"
 #import "JJToolBarView.h"
 #import "JJNotepadEditView.h"
+#import "JJEditContentModel.h"
+#import "JJNotepadListView.h"
 
-@interface JJNotepadController () <UITextFieldDelegate>
+@interface JJNotepadController () <UITextFieldDelegate, UIScrollViewDelegate>
 
 @property (nonatomic, strong) JJToolBarView *toolBar;
+@property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) JJNotepadEditView *editNotepad;
+@property (nonatomic, nonnull, strong) JJNotepadListView *listView;
+@property (nonatomic, strong) NSMutableArray *notepadDataArray;
+
 
 @end
 
@@ -23,10 +29,11 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.edgesForExtendedLayout = NO;
-//    UIBarButtonItem * item = [[UIBarButtonItem alloc] initWithCustomView:self.toolBar];
-//    self.navigationItem.leftBarButtonItem = item;
     VCAddSubview(self.toolBar);
-    VCAddSubview(self.editNotepad);
+    VCAddSubview(self.scrollView);
+    [self.scrollView addSubview:self.editNotepad];
+    [self.scrollView addSubview:self.listView];
+    
 }
 
 - (void)viewWillLayoutSubviews
@@ -39,13 +46,53 @@
     .heightIs(30)
     .widthIs(ScreenWidth);
     
-    _editNotepad.sd_layout
-    .topSpaceToView(_toolBar, 0)
+    _scrollView.sd_layout
+    .topSpaceToView(self.toolBar, 0)
     .leftSpaceToView(self.view, 0)
     .rightSpaceToView(self.view, 0)
     .bottomSpaceToView(self.view, 0);
+    
+    _editNotepad.sd_layout
+    .topSpaceToView(self.scrollView, 0)
+    .leftSpaceToView(self.scrollView, 0)
+    .widthIs(ScreenWidth)
+    .bottomSpaceToView(self.scrollView, 0);
+    
+//    _listView.sd_layout
+//    .topEqualToView(self.editNotepad)
+//    .leftSpaceToView(self.editNotepad,0)
+//    .rightSpaceToView(self.scrollView, 0)
+//    .bottomEqualToView(self.scrollView);
+    
+    _listView.sd_layout
+    .topEqualToView(self.scrollView)
+    .leftSpaceToView(self.editNotepad, 0)
+    .bottomEqualToView(self.editNotepad)
+    .widthIs(self.scrollView.width_sd);
+    
 }
 
+- (void)queryData
+{
+//    _notepadDataArray = [NSMutableArray array];
+//    for (JJEditContentModel *model in [JJEditContentModel findAll]) {
+//        [_notepadDataArray addObject:model];
+//        DLog(@"%@",model);
+//    }
+//    if (_notepadDataArray.count)
+//    {
+//        self.listView.dataList = _notepadDataArray;
+////        [self.listView reloadData];
+//    }
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    CGFloat offsizeX = scrollView.contentOffset.x;
+    NSInteger index = offsizeX / ScreenWidth;
+    [self.toolBar selectItem:index];
+    
+}
 
 - (JJToolBarView *)toolBar
 {
@@ -53,8 +100,31 @@
     {
         _toolBar = [JJToolBarView new];
         _toolBar.titleArray = @[ @"编辑", @"查看"];
+        _toolBar.followBarLocation = 1;
+        _toolBar.followBarColor = [UIColor greenColor];
+        WS;
+        [_toolBar jjToolBarViewItemSelected:^(UIButton *button) {
+            NSInteger index = button.tag;
+            weakSelf.scrollView.contentOffset = CGPointMake(ScreenWidth*index, 0);
+            if (1 == button.tag)
+            {
+//                [self queryData];
+                [self.listView queryData];
+            }
+        }];
     }
     return _toolBar;
+}
+
+- (UIScrollView *)scrollView
+{
+    if (!_scrollView) {
+        _scrollView = [[UIScrollView alloc] init];
+        _scrollView.contentSize = CGSizeMake(ScreenWidth*2, 0);
+        _scrollView.pagingEnabled = YES;
+        _scrollView.delegate = self;
+    }
+    return _scrollView;
 }
 
 - (JJNotepadEditView *)editNotepad
@@ -62,8 +132,28 @@
     if (!_editNotepad)
     {
         _editNotepad = [[JJNotepadEditView alloc] init];
+        WS;
+        [_editNotepad setSaveBlock:^(NSString *title, NSString *content, NSString *date) {
+            JJEditContentModel * model = [[JJEditContentModel alloc] init];
+            model.title = title;
+            model.content = content;
+            model.dateTime = date;
+            [JJEditContentModel saveObjects:@[model]];
+            
+            [weakSelf queryData];
+        }];
     }
     return _editNotepad;
+}
+
+- (JJNotepadListView *)listView
+{
+    if (!_listView) {
+        _listView = [[JJNotepadListView alloc] init];
+        _listView.backgroundColor = [UIColor redColor];
+        
+    }
+    return _listView;
 }
 
 - (void)didReceiveMemoryWarning {

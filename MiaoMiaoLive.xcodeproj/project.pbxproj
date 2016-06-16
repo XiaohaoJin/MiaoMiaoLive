@@ -37,6 +37,8 @@
 		4D4822741D119D6C00C365D2 /* JJEditContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4822731D119D6C00C365D2 /* JJEditContentModel.m */; };
 		4D48227A1D119D8900C365D2 /* JJHomeBillModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4822771D119D8900C365D2 /* JJHomeBillModel.m */; };
 		4D48227B1D119D8900C365D2 /* JJHomeBillTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4822791D119D8900C365D2 /* JJHomeBillTypeModel.m */; };
+		4D48227E1D127FDD00C365D2 /* JJNotepadListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D48227D1D127FDD00C365D2 /* JJNotepadListView.m */; };
+		4D4822811D127FF800C365D2 /* JJNotepadListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4822801D127FF800C365D2 /* JJNotepadListCell.m */; };
 		4D6909781CF9D8AC00E5AEED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6909771CF9D8AC00E5AEED /* main.m */; };
 		4D6909941CF9D93600E5AEED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D69098F1CF9D93600E5AEED /* AppDelegate.m */; };
 		4D6909951CF9D93600E5AEED /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D6909911CF9D93600E5AEED /* Info.plist */; };
@@ -111,6 +113,10 @@
 		4D4822771D119D8900C365D2 /* JJHomeBillModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJHomeBillModel.m; sourceTree = "<group>"; };
 		4D4822781D119D8900C365D2 /* JJHomeBillTypeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJHomeBillTypeModel.h; sourceTree = "<group>"; };
 		4D4822791D119D8900C365D2 /* JJHomeBillTypeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJHomeBillTypeModel.m; sourceTree = "<group>"; };
+		4D48227C1D127FDD00C365D2 /* JJNotepadListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJNotepadListView.h; sourceTree = "<group>"; };
+		4D48227D1D127FDD00C365D2 /* JJNotepadListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJNotepadListView.m; sourceTree = "<group>"; };
+		4D48227F1D127FF800C365D2 /* JJNotepadListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJNotepadListCell.h; sourceTree = "<group>"; };
+		4D4822801D127FF800C365D2 /* JJNotepadListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJNotepadListCell.m; sourceTree = "<group>"; };
 		4D6909731CF9D8AC00E5AEED /* MiaoMiaoLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiaoMiaoLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D6909771CF9D8AC00E5AEED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4D69098E1CF9D93600E5AEED /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -614,6 +620,10 @@
 			children = (
 				4D48223B1D1164D900C365D2 /* JJNotepadEditView.h */,
 				4D48223C1D1164D900C365D2 /* JJNotepadEditView.m */,
+				4D48227C1D127FDD00C365D2 /* JJNotepadListView.h */,
+				4D48227D1D127FDD00C365D2 /* JJNotepadListView.m */,
+				4D48227F1D127FF800C365D2 /* JJNotepadListCell.h */,
+				4D4822801D127FF800C365D2 /* JJNotepadListCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -761,6 +771,7 @@
 				4D4822661D119B3200C365D2 /* JJToolBarView.m in Sources */,
 				4D6909781CF9D8AC00E5AEED /* main.m in Sources */,
 				4D6909D91CFADDC900E5AEED /* UINavigationItem+DVVBackItem.m in Sources */,
+				4D4822811D127FF800C365D2 /* JJNotepadListCell.m in Sources */,
 				4D48227B1D119D8900C365D2 /* JJHomeBillTypeModel.m in Sources */,
 				4D6909AF1CF9D97E00E5AEED /* JJSideController.m in Sources */,
 				4D48223D1D1164D900C365D2 /* JJNotepadEditView.m in Sources */,
@@ -788,6 +799,7 @@
 				4D6909AB1CF9D97E00E5AEED /* JJHomeClassifyCell.m in Sources */,
 				4D6909A91CF9D97E00E5AEED /* JJHomeBillTypeManagerController.m in Sources */,
 				4D6909AA1CF9D97E00E5AEED /* JJHomePageController.m in Sources */,
+				4D48227E1D127FDD00C365D2 /* JJNotepadListView.m in Sources */,
 				4D690A0A1CFB044100E5AEED /* JJHomeBillController.m in Sources */,
 				4D94EF2D1D0FB2C8007033F8 /* JJGameController.m in Sources */,
 			);

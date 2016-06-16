@@ -54,9 +54,7 @@ static NSString *cellID = @"JJHomeBillControllerCellID";
 - (void)queryData
 {
     [_dataArray removeAllObjects];
-//    DLog(@"%@",[JJHomeBillTypeModel findAll]);
-//    DLog(@"%@",FormatString(@"where type = '%li'", (long)self.segment.selectedSegmentIndex));
-    
+
     NSString *sqlStr = FormatString(@"where type = '%li'", (long)self.segment.selectedSegmentIndex);
     NSMutableArray *marr = [JJHomeBillTypeModel findByCriteria:sqlStr];
     for (JJHomeBillTypeModel * model in marr)

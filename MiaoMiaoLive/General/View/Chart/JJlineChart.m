@@ -39,11 +39,7 @@
         [self addSubview:self.containerView];
         
         [self configFrame];
-        
-        self.backgroundColor = [UIColor lightGrayColor];
-        _yTitleView.backgroundColor = [UIColor lightGrayColor];
-        _xTitleView.backgroundColor = [UIColor lightGrayColor];
-        _containerView.backgroundColor = [UIColor lightGrayColor];
+     
     }
     return self;
 }
@@ -275,6 +271,8 @@
         _containerView = [UIScrollView new];
         _containerView.delegate = self;
         _containerView.tag = 1;
+        _containerView.layer.borderWidth = 1;
+        _containerView.layer.borderColor = [UIColor lightGrayColor].CGColor;
     }
     return _containerView;
 }

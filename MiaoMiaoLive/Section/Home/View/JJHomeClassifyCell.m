@@ -19,6 +19,7 @@ static NSString *cellID = @"JJHomeClassifyCollectionCell";
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self)
     {
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
         [self.contentView addSubview:self.collectionView];
     }
     return self;
