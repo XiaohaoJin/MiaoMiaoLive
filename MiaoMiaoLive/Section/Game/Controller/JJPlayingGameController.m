@@ -13,7 +13,6 @@
 #define kHighestScore @"kHighestScore1"
 #define buttonWidth  (ScreenWidth/_row)
 
-
 @interface JJPlayingGameController ()<UIAlertViewDelegate>
 
 @property (nonatomic, strong) UILabel        *scoreLabel;
@@ -71,7 +70,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-//    [self starsFlying];
+    [self starsFlying];
 //    NSTimer *timer = [NSTimer timerWithTimeInterval:5 target:self selector:@selector(starsFlying) userInfo:nil repeats:YES];
 //    NSRunLoop * runLoop = [NSRunLoop currentRunLoop];
 //    [runLoop addTimer:timer forMode:NSDefaultRunLoopMode];
