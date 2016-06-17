@@ -52,7 +52,6 @@
 		4D6909CA1CFA8BA400E5AEED /* JJHomeBillTypeManagerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6909C91CFA8BA400E5AEED /* JJHomeBillTypeManagerCell.m */; };
 		4D6909D81CFADDC900E5AEED /* UINavigationBar+DVVNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6909D31CFADDC900E5AEED /* UINavigationBar+DVVNavigationBar.m */; };
 		4D6909D91CFADDC900E5AEED /* UINavigationItem+DVVBackItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6909D51CFADDC900E5AEED /* UINavigationItem+DVVBackItem.m */; };
-		4D690A041CFAEE0300E5AEED /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6909F91CFAEE0300E5AEED /* NSString+MD5.m */; };
 		4D690A051CFAEE0300E5AEED /* UIColor+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6909FC1CFAEE0300E5AEED /* UIColor+Helper.m */; };
 		4D690A061CFAEE0300E5AEED /* UIImage+JJImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6909FF1CFAEE0300E5AEED /* UIImage+JJImageEffects.m */; };
 		4D690A071CFAEE0300E5AEED /* UILabel+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D690A021CFAEE0300E5AEED /* UILabel+Helper.m */; };
@@ -64,7 +63,9 @@
 		4D94EF2E1D0FB2C8007033F8 /* JJGameLevelTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D94EF2C1D0FB2C8007033F8 /* JJGameLevelTable.m */; };
 		4D94EF311D0FB326007033F8 /* JJPlayingGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D94EF301D0FB326007033F8 /* JJPlayingGameController.m */; };
 		4DAA86601D1135AA00DF4BDD /* JJNotepadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA865F1D1135AA00DF4BDD /* JJNotepadController.m */; };
+		4DB7932B1D13D707009E4700 /* NSString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB7932A1D13D707009E4700 /* NSString+Helper.m */; };
 		4DD64DD61D1395780089C362 /* JJTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD64DD51D1395780089C362 /* JJTextView.m */; };
+		4DD64DDD1D13C82D0089C362 /* JJNotepadDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD64DDC1D13C82D0089C362 /* JJNotepadDetailController.m */; };
 		A008DE67602CC7E8E19096D1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1999F11EEA649124C2FB2EB /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -146,8 +147,6 @@
 		4D6909D31CFADDC900E5AEED /* UINavigationBar+DVVNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+DVVNavigationBar.m"; sourceTree = "<group>"; };
 		4D6909D41CFADDC900E5AEED /* UINavigationItem+DVVBackItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationItem+DVVBackItem.h"; sourceTree = "<group>"; };
 		4D6909D51CFADDC900E5AEED /* UINavigationItem+DVVBackItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+DVVBackItem.m"; sourceTree = "<group>"; };
-		4D6909F81CFAEE0300E5AEED /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
-		4D6909F91CFAEE0300E5AEED /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		4D6909FB1CFAEE0300E5AEED /* UIColor+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Helper.h"; sourceTree = "<group>"; };
 		4D6909FC1CFAEE0300E5AEED /* UIColor+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Helper.m"; sourceTree = "<group>"; };
 		4D6909FE1CFAEE0300E5AEED /* UIImage+JJImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JJImageEffects.h"; sourceTree = "<group>"; };
@@ -170,8 +169,12 @@
 		4D94EF301D0FB326007033F8 /* JJPlayingGameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJPlayingGameController.m; sourceTree = "<group>"; };
 		4DAA865E1D1135AA00DF4BDD /* JJNotepadController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJNotepadController.h; sourceTree = "<group>"; };
 		4DAA865F1D1135AA00DF4BDD /* JJNotepadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJNotepadController.m; sourceTree = "<group>"; };
+		4DB793291D13D707009E4700 /* NSString+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Helper.h"; sourceTree = "<group>"; };
+		4DB7932A1D13D707009E4700 /* NSString+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Helper.m"; sourceTree = "<group>"; };
 		4DD64DD41D1395780089C362 /* JJTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJTextView.h; sourceTree = "<group>"; };
 		4DD64DD51D1395780089C362 /* JJTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJTextView.m; sourceTree = "<group>"; };
+		4DD64DDB1D13C82D0089C362 /* JJNotepadDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJNotepadDetailController.h; sourceTree = "<group>"; };
+		4DD64DDC1D13C82D0089C362 /* JJNotepadDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJNotepadDetailController.m; sourceTree = "<group>"; };
 		C1999F11EEA649124C2FB2EB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6065F2F6D58E79F0B04CB80 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -410,7 +413,7 @@
 		4D6909921CF9D93600E5AEED /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				4D6909F71CFAEE0300E5AEED /* NSString+MD5 */,
+				4DB793281D13D707009E4700 /* NSString+Helper */,
 				4D6909FA1CFAEE0300E5AEED /* UIColor+Helper */,
 				4D6909FD1CFAEE0300E5AEED /* UIImage+ImageEffects */,
 				4D690A001CFAEE0300E5AEED /* UILabel+Helper */,
@@ -515,15 +518,6 @@
 			path = DVVNavigation;
 			sourceTree = "<group>";
 		};
-		4D6909F71CFAEE0300E5AEED /* NSString+MD5 */ = {
-			isa = PBXGroup;
-			children = (
-				4D6909F81CFAEE0300E5AEED /* NSString+MD5.h */,
-				4D6909F91CFAEE0300E5AEED /* NSString+MD5.m */,
-			);
-			path = "NSString+MD5";
-			sourceTree = "<group>";
-		};
 		4D6909FA1CFAEE0300E5AEED /* UIColor+Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -616,6 +610,8 @@
 			children = (
 				4DAA865E1D1135AA00DF4BDD /* JJNotepadController.h */,
 				4DAA865F1D1135AA00DF4BDD /* JJNotepadController.m */,
+				4DD64DDB1D13C82D0089C362 /* JJNotepadDetailController.h */,
+				4DD64DDC1D13C82D0089C362 /* JJNotepadDetailController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -631,6 +627,15 @@
 				4D4822801D127FF800C365D2 /* JJNotepadListCell.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		4DB793281D13D707009E4700 /* NSString+Helper */ = {
+			isa = PBXGroup;
+			children = (
+				4DB793291D13D707009E4700 /* NSString+Helper.h */,
+				4DB7932A1D13D707009E4700 /* NSString+Helper.m */,
+			);
+			path = "NSString+Helper";
 			sourceTree = "<group>";
 		};
 		4DD64DD31D1395780089C362 /* TextView */ = {
@@ -805,13 +810,13 @@
 				4D690A101CFB1DC200E5AEED /* JJHomePageCell.m in Sources */,
 				4D4822651D119B3200C365D2 /* JJToastView.m in Sources */,
 				4D3EC23D1D10513900810C79 /* ISRDataHelper.m in Sources */,
+				4DD64DDD1D13C82D0089C362 /* JJNotepadDetailController.m in Sources */,
 				4D48227A1D119D8900C365D2 /* JJHomeBillModel.m in Sources */,
 				4D3EC24A1D10519100810C79 /* JJFMDBManager.m in Sources */,
 				4D94EF2E1D0FB2C8007033F8 /* JJGameLevelTable.m in Sources */,
 				4D6909CA1CFA8BA400E5AEED /* JJHomeBillTypeManagerCell.m in Sources */,
 				4DAA86601D1135AA00DF4BDD /* JJNotepadController.m in Sources */,
 				4D690A061CFAEE0300E5AEED /* UIImage+JJImageEffects.m in Sources */,
-				4D690A041CFAEE0300E5AEED /* NSString+MD5.m in Sources */,
 				4D690A051CFAEE0300E5AEED /* UIColor+Helper.m in Sources */,
 				4D3EC24B1D10519100810C79 /* JJFMDBModel.m in Sources */,
 				4D6909D81CFADDC900E5AEED /* UINavigationBar+DVVNavigationBar.m in Sources */,
@@ -824,6 +829,7 @@
 				4D690A0A1CFB044100E5AEED /* JJHomeBillController.m in Sources */,
 				4DD64DD61D1395780089C362 /* JJTextView.m in Sources */,
 				4D94EF2D1D0FB2C8007033F8 /* JJGameController.m in Sources */,
+				4DB7932B1D13D707009E4700 /* NSString+Helper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

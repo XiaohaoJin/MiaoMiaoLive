@@ -31,6 +31,7 @@
 
 // 类别
 #import "UIColor+Helper.h"
+#import "NSString+Helper.h"
 // 刷新
 
 // Loading

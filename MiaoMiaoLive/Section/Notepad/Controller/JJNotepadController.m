@@ -11,6 +11,7 @@
 #import "JJNotepadEditView.h"
 #import "JJEditContentModel.h"
 #import "JJNotepadListView.h"
+#import "JJNotepadDetailController.h"
 
 @interface JJNotepadController () <UITextFieldDelegate, UIScrollViewDelegate>
 
@@ -29,6 +30,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.edgesForExtendedLayout = NO;
+    self.navigationItem.title = @"记事本";
     VCAddSubview(self.toolBar);
     VCAddSubview(self.scrollView);
     [self.scrollView addSubview:self.editNotepad];
@@ -58,32 +60,12 @@
     .widthIs(ScreenWidth)
     .bottomSpaceToView(self.scrollView, 0);
     
-//    _listView.sd_layout
-//    .topEqualToView(self.editNotepad)
-//    .leftSpaceToView(self.editNotepad,0)
-//    .rightSpaceToView(self.scrollView, 0)
-//    .bottomEqualToView(self.scrollView);
-    
     _listView.sd_layout
     .topEqualToView(self.scrollView)
     .leftSpaceToView(self.editNotepad, 0)
     .bottomEqualToView(self.editNotepad)
     .widthIs(self.scrollView.width_sd);
     
-}
-
-- (void)queryData
-{
-//    _notepadDataArray = [NSMutableArray array];
-//    for (JJEditContentModel *model in [JJEditContentModel findAll]) {
-//        [_notepadDataArray addObject:model];
-//        DLog(@"%@",model);
-//    }
-//    if (_notepadDataArray.count)
-//    {
-//        self.listView.dataList = _notepadDataArray;
-////        [self.listView reloadData];
-//    }
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
@@ -108,7 +90,6 @@
             weakSelf.scrollView.contentOffset = CGPointMake(ScreenWidth*index, 0);
             if (1 == button.tag)
             {
-//                [self queryData];
                 [self.listView queryData];
             }
         }];
@@ -132,15 +113,12 @@
     if (!_editNotepad)
     {
         _editNotepad = [[JJNotepadEditView alloc] init];
-        WS;
         [_editNotepad setSaveBlock:^(NSString *title, NSString *content, NSString *date) {
             JJEditContentModel * model = [[JJEditContentModel alloc] init];
             model.title = title;
             model.content = content;
             model.dateTime = date;
             [JJEditContentModel saveObjects:@[model]];
-            
-            [weakSelf queryData];
         }];
     }
     return _editNotepad;
@@ -150,8 +128,13 @@
 {
     if (!_listView) {
         _listView = [[JJNotepadListView alloc] init];
-        _listView.backgroundColor = [UIColor redColor];
-        
+        WS;
+        [_listView setSelectdBlock:^(NSInteger index, JJEditContentModel *model) {
+            JJNotepadDetailController *detailVC = [JJNotepadDetailController new];
+            detailVC.model = model;
+            [weakSelf.navigationController pushViewController:detailVC animated:YES];
+            
+        }];
     }
     return _listView;
 }

@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FDFullscreenPopGesture.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FMDB.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,12 +47,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2F1B7B0FADF45E01DBF192B88EFCFF4A</key>
+		<key>2C71DE0FB8A6E5BB6EAF9FB037D799CC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8321AE0BC3B1986FDF1EC4321B754CC8</key>
+		<key>5EC2705B2075ED6EE58F72CE61CE031A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9C6F432FD19CA9ACEA8DA1A50D5577BB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,12 +67,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AE973B0C0D7577A3090604C724601680</key>
+		<key>B0231B817EC712F3D173F240F2001364</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BB45109121769BCA8170AD10516A868A</key>
+		<key>B0385E503AD3A7F24C22B73CD450E711</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -35,10 +35,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
-    
+    self.view.backgroundColor = ViewBgColor;
     self.edgesForExtendedLayout = NO;
-    
     _btnArray = [NSMutableArray array];
     self.navigationController.navigationBar.backgroundColor = [UIColor whiteColor];
     self.navigationItem.titleView = self.scoreLabel;
@@ -47,12 +45,6 @@
     NSURL *sourceUrl = [NSURL URLWithString:sourcePath];
     _playerFaile = [[AVAudioPlayer alloc] initWithContentsOfURL:sourceUrl error:nil];
     [_playerFaile prepareToPlay];
-    
-    
-    NSString *sourcePath1 = [[NSBundle mainBundle]pathForResource:@"sound" ofType:@"caf"];
-    NSURL *sourceUrl1 = [NSURL URLWithString:sourcePath1];
-    _playerSuccess = [[AVAudioPlayer alloc] initWithContentsOfURL:sourceUrl1 error:nil];
-    [_playerSuccess prepareToPlay];
     
     _pinLv = 0.05;
     _score = 0;
@@ -334,7 +326,7 @@
     {
         UILabel* label = [[UILabel alloc]init];
         label.frame = CGRectMake(0, 0, 100, 20);
-        label.textColor = [UIColor redColor];
+        label.textColor = [UIColor blackColor];
         label.font = [UIFont systemFontOfSize:14.0f];
         label.textAlignment = NSTextAlignmentCenter;
         label.text = @"当前得分：0";

@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JJEditContentModel.h"
 
-typedef void(^JJNotepadListViewDidSelected)(NSInteger index);
+typedef void(^JJNotepadListViewDidSelected)(NSInteger index, JJEditContentModel *model);
 
 @interface JJNotepadListView : UITableView
 

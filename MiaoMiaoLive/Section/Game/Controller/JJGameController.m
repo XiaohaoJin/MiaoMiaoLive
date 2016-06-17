@@ -23,6 +23,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = ViewBgColor;
     self.edgesForExtendedLayout = NO;
+    self.navigationItem.title = @"休闲娱乐";
     [self.view addSubview:self.table];
     
 }

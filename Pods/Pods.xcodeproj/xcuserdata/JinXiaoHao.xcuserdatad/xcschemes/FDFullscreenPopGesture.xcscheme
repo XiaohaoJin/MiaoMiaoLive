@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'C6FE95DC403AFDD032201B7F'
-               BlueprintName = 'SDAutoLayout'
+               BlueprintIdentifier = 'F8C9D174B3D2A6711F953710'
+               BlueprintName = 'FDFullscreenPopGesture'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libSDAutoLayout.a'>
+               BuildableName = 'libFDFullscreenPopGesture.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -27,6 +27,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.edgesForExtendedLayout = NO;
+    self.navigationItem.title = @"账单明细";
     [self.view addSubview:self.tableView];
     [self.view addSubview:self.updateButton];
     _titleArray = @[@"类型",@"分类",@"时间",@"金额"];

@@ -8,7 +8,7 @@
 
 #import "JJNotepadListView.h"
 #import "JJNotepadListCell.h"
-#import "JJEditContentModel.h"
+
 #import "UITableView+FDTemplateLayoutCell.h"
 
 @interface JJNotepadListView () <UITableViewDelegate, UITableViewDataSource>
@@ -43,9 +43,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    JJEditContentModel *model = _dataList[indexPath.row];
     if (_selectdBlock)
     {
-        _selectdBlock(indexPath.row);
+        _selectdBlock(indexPath.row, model);
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

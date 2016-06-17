@@ -80,6 +80,8 @@
     if (!_signImage)
     {
         _signImage = [[UIImageView alloc] init];
+        _signImage.layer.borderWidth = 1;
+        _signImage.layer.borderColor = ViewBgColor.CGColor;
     }
     return _signImage;
 }
@@ -108,12 +110,13 @@
 
 - (UILabel *)contentLabel
 {
-    if (!_contentLabel) {
+    if (!_contentLabel)
+    {
         _contentLabel = [[UILabel alloc] init];
         _contentLabel.backgroundColor = [UIColor colorWithHexString:@"eeeeee"];
         [_contentLabel setTextColor:[UIColor blackColor]];
         _contentLabel.font = [UIFont systemFontOfSize:12];
-        _contentLabel.numberOfLines = 5;
+        _contentLabel.numberOfLines = 0;
     }
     return _contentLabel;
 }
