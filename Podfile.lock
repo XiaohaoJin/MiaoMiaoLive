@@ -10,7 +10,7 @@ PODS:
 DEPENDENCIES:
   - Colours (~> 5.3.0)
   - FMDB (~> 2.6.2)
-  - SDAutoLayout
+  - SDAutoLayout (~> 2.1.1)
   - SVProgressHUD (~> 1.0)
   - UITableView+FDTemplateLayoutCell (~> 1.5.beta)
 

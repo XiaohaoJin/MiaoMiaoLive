@@ -21,6 +21,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor = ViewBgColor;
     self.edgesForExtendedLayout = NO;
     [self.view addSubview:self.table];
     

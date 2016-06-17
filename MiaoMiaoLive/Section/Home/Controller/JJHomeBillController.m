@@ -38,11 +38,11 @@ static NSString *cellID = @"JJHomeBillControllerCellID";
     self.edgesForExtendedLayout = NO;
     [self.view addSubview:self.collectionView];
     self.navigationItem.titleView = self.segment;
-    [self.view addSubview:self.showTitleLabel];
-    [self.view addSubview:self.moneyText];
-    [self.view addSubview:self.dateButton];
     
-    self.collectionView.backgroundColor = [UIColor greenColor];
+    VCAddSubview(self.showTitleLabel);
+    VCAddSubview(self.moneyText);
+    VCAddSubview(self.dateButton);
+    
     _dataArray = [NSMutableArray array];
     [self queryData];
     self.tabBarController.hidesBottomBarWhenPushed = YES;
@@ -224,6 +224,7 @@ static NSString *cellID = @"JJHomeBillControllerCellID";
         _collectionView.layer.shadowRadius = 1;
         _collectionView.layer.shadowOffset = CGSizeMake(2, 2);
         _collectionView.layer.shadowOpacity = 0.5;
+        _collectionView.backgroundColor = ViewBgColor;
     }
     return _collectionView;
 }
@@ -273,6 +274,7 @@ static NSString *cellID = @"JJHomeBillControllerCellID";
         _dateButton.layer.borderColor = [UIColor blackColor].CGColor;
         _dateButton.layer.borderWidth = 1;
         _dateButton.layer.cornerRadius = 10;
+        [_dateButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
         [formatter setDateFormat:@"yyyy.MM.dd"];
         NSString *dateTime = [formatter stringFromDate:[NSDate date]];

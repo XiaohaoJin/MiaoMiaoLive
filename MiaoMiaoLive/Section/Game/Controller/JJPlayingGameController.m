@@ -71,7 +71,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self starsFlying];
+//    [self starsFlying];
 //    NSTimer *timer = [NSTimer timerWithTimeInterval:5 target:self selector:@selector(starsFlying) userInfo:nil repeats:YES];
 //    NSRunLoop * runLoop = [NSRunLoop currentRunLoop];
 //    [runLoop addTimer:timer forMode:NSDefaultRunLoopMode];
@@ -80,13 +80,14 @@
 - (void)viewDidDisappear:(BOOL)animated
 {
     [super viewDidDisappear:animated];
-    
-    
+    [_timer invalidate];
+    _timer = nil;
 }
 
 - (void)dealloc
 {
     [_timer invalidate];
+    _timer = nil;
 }
 
 
@@ -195,6 +196,7 @@
 
 - (void)blackBtnPress:(UIButton *)btn
 {
+    [self shakeToShow:btn];
     // 点中分数加1
     _score += 1;
     [self speedUp];
@@ -248,8 +250,24 @@
         _pinLv = 0.05;
         _scoreLabel.text = @"当前得分：0";
         _score = 0;
-        _timer = [NSTimer scheduledTimerWithTimeInterval:_pinLv target:self selector:@selector(beginAction) userInfo:nil repeats:YES];
+        
+        _timer = [NSTimer scheduledTimerWithTimeInterval:_pinLv target:self selector:@selector(beginGame) userInfo:nil repeats:YES];
     }
+}
+
+- (void)shakeToShow:(UIView*)aView
+{    
+    // keyFrameAnimation 上面加CATransform3DMakeScale
+    CAKeyframeAnimation* animation = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
+    animation.duration = 0.5;
+    
+    NSMutableArray *values = [NSMutableArray array];
+    [values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(0.9, 0.9, 1.0)]];
+    [values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(1.1, 1.1, 1.0)]];
+    [values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(0.9, 0.9, 1.0)]];
+    [values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(1.0, 1.0, 1.0)]];
+    animation.values = values;
+    [aView.layer addAnimation:animation forKey:nil];
 }
 
 - (void)starsFlying

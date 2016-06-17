@@ -45,7 +45,6 @@
     if (!_titleLabel)
     {
         UILabel* label = [[UILabel alloc]init];
-        label.backgroundColor = [UIColor orangeColor];
         label.textColor = [UIColor blackColor];
         label.font = [UIFont systemFontOfSize:14.0f];
         label.textAlignment = NSTextAlignmentCenter;

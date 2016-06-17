@@ -62,7 +62,6 @@ static NSString *cellID = @"JJHomeClassifyCollectionCell";
     if (!cell)
     {
         cell = [[JJHomeClassifyCollectionCell alloc] init];
-        cell.backgroundColor = [UIColor yellowColor];
     }
     cell.titleLabel.text = _dataArray[indexPath.row];
     return cell;
@@ -79,6 +78,7 @@ static NSString *cellID = @"JJHomeClassifyCollectionCell";
           [_collectionView registerClass:[JJHomeClassifyCollectionCell class] forCellWithReuseIdentifier:cellID];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
+        _collectionView.backgroundColor = [UIColor whiteColor];
         
     }
     return _collectionView;

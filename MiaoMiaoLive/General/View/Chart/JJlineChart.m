@@ -94,7 +94,7 @@
         titleLabel.frame = CGRectMake(idx * _xLabelWidth, 0, _xLabelWidth, _xTitleHeight);
         titleLabel.text = obj;
         titleLabel.font = [UIFont systemFontOfSize:12];
-        DLog(@"obj == %@",obj);
+//        DLog(@"obj == %@",obj);
         [_xTitleView addSubview:titleLabel];
     }];
     

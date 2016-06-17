@@ -13,5 +13,6 @@
 @property (nonatomic, strong) UIImageView *typeImg;
 @property (nonatomic, strong) UILabel *nameLabel;
 @property (nonatomic, strong) UILabel *moneyLabel;
+@property (nonnull, strong) UIView *lineView;
 
 @end

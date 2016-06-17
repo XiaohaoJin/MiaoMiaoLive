@@ -28,7 +28,7 @@
 #define NaviItemFont [UIFont systemFontOfSize:NaviItemFontSize]
 
 /** View的背景色 */
-#define ViewBgColor RGBColor(255, 255, 255)
+#define ViewBgColor [UIColor colorWithHexString:@"eeeeee"]
 
 /** Button正常情况下的背景色 */
 #define BtnNormalBgColor NaviBgColor

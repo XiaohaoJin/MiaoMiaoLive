@@ -31,11 +31,10 @@ static NSString *cellID = @"JJHomeBillTypeManagerCollectionCellID";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = ViewBgColor;
     self.edgesForExtendedLayout = NO;
-    [self.view addSubview:self.collectionView];
     self.navigationItem.titleView = self.segment;
-    self.collectionView.backgroundColor = [UIColor greenColor];
+    VCAddSubview(self.collectionView);
     VCAddSubview(self.addButton);
     _dataArray = [NSMutableArray array];
     
@@ -173,6 +172,7 @@ static NSString *cellID = @"JJHomeBillTypeManagerCollectionCellID";
         [_collectionView registerClass:[JJHomeBillTypeManagerCell class] forCellWithReuseIdentifier:cellID];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
+        _collectionView.backgroundColor = ViewBgColor;
         
     }
     return _collectionView;

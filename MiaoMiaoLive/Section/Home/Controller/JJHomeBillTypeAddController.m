@@ -7,22 +7,19 @@
 //
 
 #import "JJHomeBillTypeAddController.h"
-
+#import "JJTextView.h"
 CGFloat const kHorizontalMargin = 10.f;
 CGFloat const kVerticalMargin = 20.f;
 
 @interface JJHomeBillTypeAddController () <UITextViewDelegate, IFlyRecognizerViewDelegate>
-@property (nonatomic, strong) UITextView *textView;
-@property (nonatomic, strong) UILabel *markLabel;
+@property (nonatomic, strong) JJTextView *textView;
 @property (nonatomic, strong) UIButton *doneButton;
-
 @property (nonatomic, strong) UIButton *rightNavButton;
 @property (nonatomic, strong) IFlyRecognizerView *iflyRecognizerView;//带界面的识别对象
 
 @end
 
 @implementation JJHomeBillTypeAddController
-
 
 #pragma mark - lift cycle
 
@@ -36,10 +33,8 @@ CGFloat const kVerticalMargin = 20.f;
     self.navigationItem.rightBarButtonItem = navButton;
     
     [self.view addSubview:self.textView];
-    [_textView addSubview:self.markLabel];
     [self.view addSubview:self.doneButton];
     [self configIflyRecognizerView];
-    [self showOrHideMarkLabel];
     
 }
 
@@ -55,7 +50,6 @@ CGFloat const kVerticalMargin = 20.f;
     CGSize size = self.view.bounds.size;
     CGFloat margin = 12;
     _textView.frame = CGRectMake(margin, margin, size.width - margin*2, 120);
-    _markLabel.frame = CGRectMake(5, 5, CGRectGetWidth(_textView.frame), 20);
     CGFloat doneBtnHeight = 40;
     _doneButton.frame = CGRectMake(12, CGRectGetMaxY(_textView.frame) + margin, size.width - margin*2, doneBtnHeight);
     _rightNavButton.frame = CGRectMake(0 , 0, 22, 22);
@@ -95,30 +89,10 @@ CGFloat const kVerticalMargin = 20.f;
     
     if ([text isEqualToString:@"\n"])
     { // 判断输入的字是否是回车，即按下return
-        // 在这里做响应return键的代码
         [self doneButtonAction:_doneButton];
-        return NO; //这里返回NO，就代表return键值失效，即页面上按下return，不会出现换行，如果为yes，则输入页面会换行
+        return NO; // 返回NO，就代表return键值失效，即页面上按下return，不会出现换行，如果为yes，则输入页面会换行
     }
     return YES;
-}
-
-- (void)textViewDidChange:(UITextView *)textView
-{
-    
-    [self showOrHideMarkLabel];
-}
-
-- (void)showOrHideMarkLabel
-{
-    
-    if (_textView.text.length)
-    {
-        _markLabel.hidden = true;
-    }
-    else
-    {
-        _markLabel.hidden = false;
-    }
 }
 
 - (void)configIflyRecognizerView
@@ -153,7 +127,6 @@ CGFloat const kVerticalMargin = 20.f;
     }
     else
     {
-        [self showOrHideMarkLabel];
         _textView.text = [_textView.text stringByAppendingString:resu];
     }
 }
@@ -169,9 +142,8 @@ CGFloat const kVerticalMargin = 20.f;
 
 - (void)beginButtonAction
 {
-    　//启动识别服务
+    // 启动识别服务
     [_iflyRecognizerView start];
-    
 }
 
 #pragma mark - lazy load
@@ -189,13 +161,14 @@ CGFloat const kVerticalMargin = 20.f;
 }
 
 
-- (UITextView *)textView
+- (JJTextView *)textView
 {
     if (!_textView)
     {
-        _textView = [UITextView new];
+        _textView = [JJTextView new];
         _textView.delegate = self;
         _textView.backgroundColor = [UIColor colorWithHexString:@"EEEEEE"];
+        _textView.placeHolder = @"请点击输入";
         [_textView.layer setMasksToBounds:YES];
         [_textView.layer setCornerRadius:4];
         _textView.returnKeyType = UIReturnKeyDone;
@@ -203,17 +176,6 @@ CGFloat const kVerticalMargin = 20.f;
     return _textView;
 }
 
-- (UILabel *)markLabel
-{
-    if (!_markLabel)
-    {
-        _markLabel = [UILabel new];
-        _markLabel.text = @"请点击输入";
-        _markLabel.textColor = [UIColor colorWithHexString:@"AAAAAA"];
-        _markLabel.font = [UIFont systemFontOfSize:14];
-    }
-    return _markLabel;
-}
 
 - (UIButton *)doneButton
 {

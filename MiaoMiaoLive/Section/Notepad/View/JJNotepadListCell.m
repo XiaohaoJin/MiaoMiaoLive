@@ -110,7 +110,7 @@
 {
     if (!_contentLabel) {
         _contentLabel = [[UILabel alloc] init];
-        _contentLabel.backgroundColor = [UIColor lightGrayColor];
+        _contentLabel.backgroundColor = [UIColor colorWithHexString:@"eeeeee"];
         [_contentLabel setTextColor:[UIColor blackColor]];
         _contentLabel.font = [UIFont systemFontOfSize:12];
         _contentLabel.numberOfLines = 5;

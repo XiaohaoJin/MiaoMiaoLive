@@ -40,24 +40,19 @@
         {
             NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
             [formatter setDateFormat:@"yyyy.MM.dd hh.mm.ss"];
-            NSString *dateTime = [formatter stringFromDate:[NSDate date]];
-            
+            NSString *dateTime = [formatter stringFromDate:[NSDate date]];   
             _saveBlock(_titleText.text, _contentText.text, dateTime);
         }
-
-        
     }
     else
     {
         if (_titleText.text.length == 0)
         {
-            _altv.message = @"写个标题吧！";
-            [_altv show];
+            [JJToastView showMessage:@"写个标题吧！"];
         }
         else
         {
-            _altv.message = @"内容没写呢！";
-            [_altv show];
+            [JJToastView showMessage:@"内容没写呢！"];
         }
     }
 }
@@ -67,24 +62,26 @@
     if (!_titleText)
     {
         _titleText = [[UITextField alloc]init];
-        _titleText.font = [UIFont systemFontOfSize:16];
+        _titleText.font = [UIFont systemFontOfSize:16 weight:5];
         _titleText.borderStyle = 0;
         _titleText.textAlignment = 1;
         _titleText.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1];
+        _titleText.placeholder = @"请输入标题";
         _titleText.delegate = self;
     }
     return _titleText;
 }
 
-- (UITextView *)contentText
+
+
+- (JJTextView *)contentText
 {
     if (!_contentText)
     {
-        _contentText = [[UITextView alloc]init];
+        _contentText = [[JJTextView alloc]init];
         _contentText.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1];
         _contentText.font = [UIFont systemFontOfSize:14];
-        _contentText.delegate = self;
-        
+        _contentText.placeHolder = @"请输入正文";
     }
     return _contentText;
 }

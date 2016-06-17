@@ -49,7 +49,7 @@
 {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor colorWithHexString:@"eeeeee"];
     self.edgesForExtendedLayout = NO;
     _dataMoneyArray = [NSMutableArray array];
     _dataNameArray = [NSMutableArray array];
@@ -309,8 +309,6 @@
     if (0 == indexPath.row)
     {
         classifyCell.dataArray = @[@"类别管理",@"记账"].mutableCopy;
-        classifyCell.backgroundColor = [UIColor magentaColor];
-        
         WS;
         WeakObj(classifyCell, weakClassifyCell);
 //        __weak typeof(classifyCell) weakClassixfyCell = classifyCell;
@@ -345,7 +343,6 @@
         if (!cell)
         {
             cell = [[JJHomePageCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
-            cell.backgroundColor = [UIColor cyanColor];
         }
         if ([_dataTypeArray[indexPath.row-1] isEqualToString:@"0"])
         {
@@ -357,6 +354,9 @@
         }
         cell.nameLabel.text = _dataNameArray[indexPath.row-1];
         cell.moneyLabel.text = _dataMoneyArray[indexPath.row-1];
+//        if (indexPath.row == _dataArray.count) {
+//            cell.lineView.hidden = YES;
+//        }
         return cell;
         
     }
@@ -412,8 +412,7 @@
         UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, NaviItemFontSize * 2, 44)];
         [button setTitle:@"侧栏" forState:UIControlStateNormal];
         button.titleLabel.font = NaviItemFont;
-        [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-//        button.backgroundColor = [UIColor cyanColor];
+        [button setTitleColor:[UIColor colorWithHexString:@"eeeeee"] forState:UIControlStateNormal];
         button.userInteractionEnabled = YES;
         _leftNavBtn = button;
     }
@@ -443,7 +442,7 @@
         tableView.dataSource = self;
         tableView.tableHeaderView = self.tableHeadView;
         tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        
+        tableView.backgroundColor = [UIColor colorWithHexString:@"eeeeee"];
         _tableView = tableView;
     }
     return _tableView;
@@ -455,7 +454,6 @@
     {
         _tableHeadView = [UIView new];
         _tableHeadView.frame = CGRectMake(0, 0, ScreenWidth, TableHeadViewHeight);
-
     }
     return _tableHeadView;
 }

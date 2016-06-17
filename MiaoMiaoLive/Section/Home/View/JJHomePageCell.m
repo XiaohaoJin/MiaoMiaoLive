@@ -19,6 +19,7 @@
         [self.contentView addSubview:self.nameLabel];
         [self.contentView addSubview:self.typeImg];
         [self.contentView addSubview:self.moneyLabel];
+        [self.contentView addSubview:self.lineView];
     }
     return self;
 }
@@ -29,7 +30,9 @@
     _typeImg.frame = CGRectMake(10, 0, 20, 30);
     _nameLabel.frame = CGRectMake(45, 0, 100, 30);
     _moneyLabel.frame = CGRectMake(ScreenWidth - 100, 0, 90, 30);
+    _lineView.frame = CGRectMake(10, 0, ScreenWidth - 20, 1);
 }
+
 
 - (UILabel *)nameLabel
 {
@@ -68,6 +71,15 @@
     return _typeImg;
 }
 
+- (UIView *)lineView
+{
+    if (!_lineView)
+    {
+        _lineView = [UIView new];
+        _lineView.backgroundColor = [UIColor colorWithHexString:@"eeeeee"];
+    }
+    return _lineView;
+}
 
 
 - (void)awakeFromNib {

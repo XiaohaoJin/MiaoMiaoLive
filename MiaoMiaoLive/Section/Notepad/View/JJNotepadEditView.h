@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "JJTextView.h"
 typedef void(^JJNotepadEditSaveBlock)(NSString * title, NSString * content, NSString *date);
 @interface JJNotepadEditView : UIView <UITextFieldDelegate>
 
@@ -15,18 +15,9 @@ typedef void(^JJNotepadEditSaveBlock)(NSString * title, NSString * content, NSSt
 //填写文章标题
 @property (nonatomic, strong) UITextField *titleText;
 //填写文章内容
-@property (nonatomic, strong) UITextView *contentText;
+@property (nonatomic, strong) JJTextView *contentText;
 //保存文章的按钮
 @property (nonatomic, strong) UIButton *saveButton;
-
-//保存时的动画
-@property (nonatomic, strong) NSTimer *tmrSave;
-//进度条（保存时显示）
-@property (nonatomic, strong) UIProgressView *pgsv;
-//加载指示器（保存时显示）
-@property (nonatomic, strong) UIActivityIndicatorView *aitv;
-//提示窗体
-@property (nonatomic, strong) UIAlertView *altv;
 
 @property (nonatomic, copy) JJNotepadEditSaveBlock saveBlock;
 

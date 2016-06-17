@@ -24,9 +24,7 @@
     {
         self.delegate = self;
         self.dataSource = self;
-//        self.rowHeight = 80;
         _dataList = [NSMutableArray array];
-//        _dataList = @[@"",@"",@""];
         [self registerClass:[JJNotepadListCell class] forCellReuseIdentifier:@"notepadcell"];
     }
     return self;
@@ -36,8 +34,8 @@
 {
     _dataList = [NSMutableArray array];
     for (JJEditContentModel *model in [JJEditContentModel findAll]) {
-        [_dataList addObject:model];
-        DLog(@"%@",model);
+        [_dataList insertObject:model atIndex:0];
+    
     }
     [self reloadData];
 }

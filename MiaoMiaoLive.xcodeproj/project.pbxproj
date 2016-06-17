@@ -64,6 +64,7 @@
 		4D94EF2E1D0FB2C8007033F8 /* JJGameLevelTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D94EF2C1D0FB2C8007033F8 /* JJGameLevelTable.m */; };
 		4D94EF311D0FB326007033F8 /* JJPlayingGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D94EF301D0FB326007033F8 /* JJPlayingGameController.m */; };
 		4DAA86601D1135AA00DF4BDD /* JJNotepadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA865F1D1135AA00DF4BDD /* JJNotepadController.m */; };
+		4DD64DD61D1395780089C362 /* JJTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD64DD51D1395780089C362 /* JJTextView.m */; };
 		A008DE67602CC7E8E19096D1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1999F11EEA649124C2FB2EB /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -169,6 +170,8 @@
 		4D94EF301D0FB326007033F8 /* JJPlayingGameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJPlayingGameController.m; sourceTree = "<group>"; };
 		4DAA865E1D1135AA00DF4BDD /* JJNotepadController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJNotepadController.h; sourceTree = "<group>"; };
 		4DAA865F1D1135AA00DF4BDD /* JJNotepadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJNotepadController.m; sourceTree = "<group>"; };
+		4DD64DD41D1395780089C362 /* JJTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJTextView.h; sourceTree = "<group>"; };
+		4DD64DD51D1395780089C362 /* JJTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJTextView.m; sourceTree = "<group>"; };
 		C1999F11EEA649124C2FB2EB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6065F2F6D58E79F0B04CB80 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -259,6 +262,7 @@
 		4D4822521D119AA700C365D2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4DD64DD31D1395780089C362 /* TextView */,
 				4D4822531D119B3200C365D2 /* AlertView */,
 				4D4822561D119B3200C365D2 /* Chart */,
 				4D4822591D119B3200C365D2 /* DateView */,
@@ -492,6 +496,7 @@
 		4D6909BB1CFA6FCA00E5AEED /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				4DD64DD71D13B69C0089C362 /* TabelAutoLayout */,
 				4D3EC2451D10519100810C79 /* JJFMDB */,
 				4D42F86B1CFFD219008C709E /* IFly */,
 				4D6909D11CFADDC900E5AEED /* DVVNavigation */,
@@ -626,6 +631,22 @@
 				4D4822801D127FF800C365D2 /* JJNotepadListCell.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		4DD64DD31D1395780089C362 /* TextView */ = {
+			isa = PBXGroup;
+			children = (
+				4DD64DD41D1395780089C362 /* JJTextView.h */,
+				4DD64DD51D1395780089C362 /* JJTextView.m */,
+			);
+			path = TextView;
+			sourceTree = "<group>";
+		};
+		4DD64DD71D13B69C0089C362 /* TabelAutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TabelAutoLayout;
 			sourceTree = "<group>";
 		};
 		BCACD51D527BD6FB9AE7F4E7 /* Pods */ = {
@@ -801,6 +822,7 @@
 				4D6909AA1CF9D97E00E5AEED /* JJHomePageController.m in Sources */,
 				4D48227E1D127FDD00C365D2 /* JJNotepadListView.m in Sources */,
 				4D690A0A1CFB044100E5AEED /* JJHomeBillController.m in Sources */,
+				4DD64DD61D1395780089C362 /* JJTextView.m in Sources */,
 				4D94EF2D1D0FB2C8007033F8 /* JJGameController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
