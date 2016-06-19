@@ -234,7 +234,7 @@ static NSString *cellID = @"JJHomeBillControllerCellID";
     if (!_segment) {
         _segment = [[UISegmentedControl alloc] initWithItems:@[ @"收入", @"支出"]];
         _segment.frame = CGRectMake(100, 100, 100, 30);
-        //        _segment.tintColor = [UIColor blackColor];
+         _segment.tintColor = [UIColor whiteColor];
         [_segment addTarget:self action:@selector(didClicksegmentedControlAction:) forControlEvents:UIControlEventValueChanged];
         _segment.selectedSegmentIndex = 0;
     }
@@ -274,7 +274,7 @@ static NSString *cellID = @"JJHomeBillControllerCellID";
         _dateButton.layer.borderColor = [UIColor blackColor].CGColor;
         _dateButton.layer.borderWidth = 1;
         _dateButton.layer.cornerRadius = 10;
-        [_dateButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+        [_dateButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
         [formatter setDateFormat:@"yyyy.MM.dd"];
         NSString *dateTime = [formatter stringFromDate:[NSDate date]];

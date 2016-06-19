@@ -235,7 +235,7 @@
     
     self.lineChartView.xTitleArray = _xLabelArray;
     self.lineChartView.valueArray = @[ _incomeArray, _spendingArray ];
-    self.lineChartView.colorArray = @[ [UIColor greenColor], [UIColor orangeColor] ];
+    self.lineChartView.colorArray = @[ RGB(82, 196, 213), RGB(237, 70, 49) ];
     self.lineChartView.xLabelWidth = 80;
     self.lineChartView.yTitleWidth =  40;
     [self.lineChartView refreshData];
@@ -411,7 +411,8 @@
     if (!_leftNavBtn)
     {
         UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, NaviItemFontSize * 2, 44)];
-        [button setTitle:@"侧栏" forState:UIControlStateNormal];
+//        [button setTitle:@"侧栏" forState:UIControlStateNormal];
+        [button setImage:[UIImage imageNamed:@"ic_side"] forState:UIControlStateNormal];
         button.titleLabel.font = NaviItemFont;
         [button setTitleColor:[UIColor colorWithHexString:@"eeeeee"] forState:UIControlStateNormal];
         button.userInteractionEnabled = YES;

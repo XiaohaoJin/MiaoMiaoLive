@@ -32,6 +32,7 @@
 // 类别
 #import "UIColor+Helper.h"
 #import "NSString+Helper.h"
+#import "UINavigationBar+JJNavigationBar.h"
 // 刷新
 
 // Loading

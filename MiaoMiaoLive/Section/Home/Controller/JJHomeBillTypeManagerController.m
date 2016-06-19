@@ -252,7 +252,7 @@ static NSString *cellID = @"JJHomeBillTypeManagerCollectionCellID";
     {
         _segment = [[UISegmentedControl alloc] initWithItems:@[ @"收入", @"支出"]];
         _segment.frame = CGRectMake(100, 100, 100, 30);
-//        _segment.tintColor = [UIColor blackColor];
+        _segment.tintColor = [UIColor whiteColor];
         [_segment addTarget:self action:@selector(didClicksegmentedControlAction:) forControlEvents:UIControlEventValueChanged];
         _segment.selectedSegmentIndex = 0;
     }

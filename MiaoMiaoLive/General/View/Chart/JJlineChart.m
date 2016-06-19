@@ -51,10 +51,12 @@
                                        0,
                                        _yTitleWidth,
                                        size.height - _xTitleHeight);
-    self.containerView.frame = CGRectMake(_yTitleWidth,
-                                          0,
-                                          size.width - _yTitleWidth,
-                                          size.height - _xTitleHeight);
+//    self.containerView.frame = CGRectMake(_yTitleWidth,
+//                                          0,
+//                                          size.width - _yTitleWidth,
+//                                          size.height - _xTitleHeight);
+    
+    self.containerView.frame = CGRectMake(0, 0, size.width, size.height - _xTitleHeight);
     self.xTitleView.frame = CGRectMake(_yTitleWidth,
                                        size.height - _xTitleHeight,
                                        size.width - _yTitleWidth,
@@ -94,7 +96,6 @@
         titleLabel.frame = CGRectMake(idx * _xLabelWidth, 0, _xLabelWidth, _xTitleHeight);
         titleLabel.text = obj;
         titleLabel.font = [UIFont systemFontOfSize:12];
-//        DLog(@"obj == %@",obj);
         [_xTitleView addSubview:titleLabel];
     }];
     
@@ -115,6 +116,15 @@
         yTitleLabel.text = [NSString stringWithFormat:@"%.0lf", _maxValue - (i * _rowValue)];
         yTitleLabel.font = [UIFont systemFontOfSize:12];
         [_yTitleView addSubview:yTitleLabel];
+        
+        /**
+         *  在scrollerview上面设置标线
+         */
+        UIView * line = [[UIView alloc] init];
+        line.frame = CGRectMake(0, (i+1)*_rowHeight-1, self.containerView.contentSize.width, 1);
+        line.backgroundColor = [UIColor lightGrayColor];
+        [self.containerView addSubview:line];
+        
     }
     
     // 绘制线
@@ -165,7 +175,7 @@
         [progressLine setLineCapStyle:kCGLineCapRound];
         [progressLine setLineJoinStyle:kCGLineJoinRound];
         
-        CGFloat xPosition = _xLabelWidth / 2.0;
+        CGFloat xPosition = _xLabelWidth;
         
         for (int j = 0; j < childArray.count; j++)
         {
@@ -271,8 +281,9 @@
         _containerView = [UIScrollView new];
         _containerView.delegate = self;
         _containerView.tag = 1;
-        _containerView.layer.borderWidth = 1;
-        _containerView.layer.borderColor = [UIColor lightGrayColor].CGColor;
+        _containerView.bounces = NO;
+//        _containerView.layer.borderWidth = 1;
+//        _containerView.layer.borderColor = [UIColor lightGrayColor].CGColor;
     }
     return _containerView;
 }
