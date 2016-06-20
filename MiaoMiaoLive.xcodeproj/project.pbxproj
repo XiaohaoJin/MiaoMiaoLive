@@ -50,8 +50,6 @@
 		4D6909AF1CF9D97E00E5AEED /* JJSideController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6909A81CF9D97E00E5AEED /* JJSideController.m */; };
 		4D6909C71CFA8AE100E5AEED /* JJHomeBillTypeAddController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6909C61CFA8AE100E5AEED /* JJHomeBillTypeAddController.m */; };
 		4D6909CA1CFA8BA400E5AEED /* JJHomeBillTypeManagerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6909C91CFA8BA400E5AEED /* JJHomeBillTypeManagerCell.m */; };
-		4D6909D81CFADDC900E5AEED /* UINavigationBar+DVVNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6909D31CFADDC900E5AEED /* UINavigationBar+DVVNavigationBar.m */; };
-		4D6909D91CFADDC900E5AEED /* UINavigationItem+DVVBackItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6909D51CFADDC900E5AEED /* UINavigationItem+DVVBackItem.m */; };
 		4D690A051CFAEE0300E5AEED /* UIColor+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6909FC1CFAEE0300E5AEED /* UIColor+Helper.m */; };
 		4D690A061CFAEE0300E5AEED /* UIImage+JJImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6909FF1CFAEE0300E5AEED /* UIImage+JJImageEffects.m */; };
 		4D690A071CFAEE0300E5AEED /* UILabel+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D690A021CFAEE0300E5AEED /* UILabel+Helper.m */; };
@@ -60,6 +58,7 @@
 		4D690A171CFB451900E5AEED /* DVVDockItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D690A141CFB451900E5AEED /* DVVDockItem.m */; };
 		4D690A181CFB451900E5AEED /* DVVTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D690A161CFB451900E5AEED /* DVVTabBarController.m */; };
 		4D795C621D16A5A000378983 /* UINavigationBar+JJNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D795C611D16A5A000378983 /* UINavigationBar+JJNavigationBar.m */; };
+		4D795C651D16D78F00378983 /* UINavigationItem+JJBackItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D795C641D16D78F00378983 /* UINavigationItem+JJBackItem.m */; };
 		4D94EF2D1D0FB2C8007033F8 /* JJGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D94EF291D0FB2C8007033F8 /* JJGameController.m */; };
 		4D94EF2E1D0FB2C8007033F8 /* JJGameLevelTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D94EF2C1D0FB2C8007033F8 /* JJGameLevelTable.m */; };
 		4D94EF311D0FB326007033F8 /* JJPlayingGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D94EF301D0FB326007033F8 /* JJPlayingGameController.m */; };
@@ -144,10 +143,6 @@
 		4D6909C61CFA8AE100E5AEED /* JJHomeBillTypeAddController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = JJHomeBillTypeAddController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		4D6909C81CFA8BA400E5AEED /* JJHomeBillTypeManagerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJHomeBillTypeManagerCell.h; sourceTree = "<group>"; };
 		4D6909C91CFA8BA400E5AEED /* JJHomeBillTypeManagerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = JJHomeBillTypeManagerCell.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		4D6909D21CFADDC900E5AEED /* UINavigationBar+DVVNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+DVVNavigationBar.h"; sourceTree = "<group>"; };
-		4D6909D31CFADDC900E5AEED /* UINavigationBar+DVVNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+DVVNavigationBar.m"; sourceTree = "<group>"; };
-		4D6909D41CFADDC900E5AEED /* UINavigationItem+DVVBackItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationItem+DVVBackItem.h"; sourceTree = "<group>"; };
-		4D6909D51CFADDC900E5AEED /* UINavigationItem+DVVBackItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+DVVBackItem.m"; sourceTree = "<group>"; };
 		4D6909FB1CFAEE0300E5AEED /* UIColor+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Helper.h"; sourceTree = "<group>"; };
 		4D6909FC1CFAEE0300E5AEED /* UIColor+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Helper.m"; sourceTree = "<group>"; };
 		4D6909FE1CFAEE0300E5AEED /* UIImage+JJImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JJImageEffects.h"; sourceTree = "<group>"; };
@@ -164,6 +159,8 @@
 		4D690A161CFB451900E5AEED /* DVVTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVVTabBarController.m; sourceTree = "<group>"; };
 		4D795C601D16A5A000378983 /* UINavigationBar+JJNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+JJNavigationBar.h"; sourceTree = "<group>"; };
 		4D795C611D16A5A000378983 /* UINavigationBar+JJNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+JJNavigationBar.m"; sourceTree = "<group>"; };
+		4D795C631D16D78F00378983 /* UINavigationItem+JJBackItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationItem+JJBackItem.h"; sourceTree = "<group>"; };
+		4D795C641D16D78F00378983 /* UINavigationItem+JJBackItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+JJBackItem.m"; sourceTree = "<group>"; };
 		4D94EF281D0FB2C8007033F8 /* JJGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJGameController.h; sourceTree = "<group>"; };
 		4D94EF291D0FB2C8007033F8 /* JJGameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJGameController.m; sourceTree = "<group>"; };
 		4D94EF2B1D0FB2C8007033F8 /* JJGameLevelTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJGameLevelTable.h; sourceTree = "<group>"; };
@@ -506,20 +503,8 @@
 				4DD64DD71D13B69C0089C362 /* TabelAutoLayout */,
 				4D3EC2451D10519100810C79 /* JJFMDB */,
 				4D42F86B1CFFD219008C709E /* IFly */,
-				4D6909D11CFADDC900E5AEED /* DVVNavigation */,
 			);
 			path = Vendor;
-			sourceTree = "<group>";
-		};
-		4D6909D11CFADDC900E5AEED /* DVVNavigation */ = {
-			isa = PBXGroup;
-			children = (
-				4D6909D21CFADDC900E5AEED /* UINavigationBar+DVVNavigationBar.h */,
-				4D6909D31CFADDC900E5AEED /* UINavigationBar+DVVNavigationBar.m */,
-				4D6909D41CFADDC900E5AEED /* UINavigationItem+DVVBackItem.h */,
-				4D6909D51CFADDC900E5AEED /* UINavigationItem+DVVBackItem.m */,
-			);
-			path = DVVNavigation;
 			sourceTree = "<group>";
 		};
 		4D6909FA1CFAEE0300E5AEED /* UIColor+Helper */ = {
@@ -573,6 +558,8 @@
 			children = (
 				4D795C601D16A5A000378983 /* UINavigationBar+JJNavigationBar.h */,
 				4D795C611D16A5A000378983 /* UINavigationBar+JJNavigationBar.m */,
+				4D795C631D16D78F00378983 /* UINavigationItem+JJBackItem.h */,
+				4D795C641D16D78F00378983 /* UINavigationItem+JJBackItem.m */,
 			);
 			path = "UINavigationBar+JJNavigationBar";
 			sourceTree = "<group>";
@@ -801,6 +788,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D795C651D16D78F00378983 /* UINavigationItem+JJBackItem.m in Sources */,
 				4D94EF311D0FB326007033F8 /* JJPlayingGameController.m in Sources */,
 				4D690A181CFB451900E5AEED /* DVVTabBarController.m in Sources */,
 				4D690A171CFB451900E5AEED /* DVVDockItem.m in Sources */,
@@ -809,7 +797,6 @@
 				4D4822621D119B3200C365D2 /* JJAlertView.m in Sources */,
 				4D4822661D119B3200C365D2 /* JJToolBarView.m in Sources */,
 				4D6909781CF9D8AC00E5AEED /* main.m in Sources */,
-				4D6909D91CFADDC900E5AEED /* UINavigationItem+DVVBackItem.m in Sources */,
 				4D4822811D127FF800C365D2 /* JJNotepadListCell.m in Sources */,
 				4D48227B1D119D8900C365D2 /* JJHomeBillTypeModel.m in Sources */,
 				4D6909AF1CF9D97E00E5AEED /* JJSideController.m in Sources */,
@@ -832,7 +819,6 @@
 				4D690A061CFAEE0300E5AEED /* UIImage+JJImageEffects.m in Sources */,
 				4D690A051CFAEE0300E5AEED /* UIColor+Helper.m in Sources */,
 				4D3EC24B1D10519100810C79 /* JJFMDBModel.m in Sources */,
-				4D6909D81CFADDC900E5AEED /* UINavigationBar+DVVNavigationBar.m in Sources */,
 				4D795C621D16A5A000378983 /* UINavigationBar+JJNavigationBar.m in Sources */,
 				4D4822741D119D6C00C365D2 /* JJEditContentModel.m in Sources */,
 				4D4822641D119B3200C365D2 /* JJDatePickerView.m in Sources */,

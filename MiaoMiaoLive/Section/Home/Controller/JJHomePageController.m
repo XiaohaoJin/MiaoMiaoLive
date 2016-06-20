@@ -23,6 +23,8 @@
 
 @interface JJHomePageController () <UITableViewDataSource, UITableViewDelegate>
 
+@property (nonatomic, strong) UIBarButtonItem *barBtnItem;
+
 @property (nonatomic, strong) UIButton * leftNavBtn;
 @property (nonatomic, strong) JJSideBarController *sideBarVC;
 @property (nonatomic, strong) UIView *backgroundHideView;
@@ -58,15 +60,15 @@
     _dataTimeArray = [NSMutableArray array];
     self.dataArray = [NSMutableArray array];
     // 设置导航栏按钮
-    UIBarButtonItem *barBtnItem = [[UIBarButtonItem alloc] initWithCustomView:self.leftNavBtn];
-    self.navigationItem.leftBarButtonItem = barBtnItem;
+    _barBtnItem = [[UIBarButtonItem alloc] initWithCustomView:self.leftNavBtn];
+    self.navigationItem.leftBarButtonItem = _barBtnItem;
     [self.leftNavBtn addTarget:self action:@selector(leftNavBtnAction) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:self.tableView];
     [_tableHeadView addSubview:self.lineChartView];
 
     [self configChartView];
-    self.edgesForExtendedLayout = NO;
+
 }
 
 - (void)viewWillLayoutSubviews
@@ -80,6 +82,10 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    
+    
+    
     // 每次显示都刷新下数据
     [self queryData];
 }
@@ -130,6 +136,8 @@
         {
             sumIncome += [model.money floatValue];
         }
+        DLog(@"%0f",sumIncome);
+        
         [_incomeArray addObject:[NSString stringWithFormat:@"%2f",sumIncome]];
         
         // 支出

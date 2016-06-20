@@ -113,9 +113,11 @@
                                        i * _rowHeight,
                                        _yTitleWidth,
                                        _rowHeight);
-        yTitleLabel.text = [NSString stringWithFormat:@"%.0lf", _maxValue - (i * _rowValue)];
+        yTitleLabel.text = [NSString stringWithFormat:@"%.1lf", _maxValue - (i * _rowValue)];
         yTitleLabel.font = [UIFont systemFontOfSize:12];
         [_yTitleView addSubview:yTitleLabel];
+        
+        
         
         /**
          *  在scrollerview上面设置标线
@@ -179,14 +181,26 @@
         
         for (int j = 0; j < childArray.count; j++)
         {
-            CGFloat value = [childArray[j] floatValue];
+            CGFloat value = [childArray[j] floatValue]; //数据
+          
             CGFloat ratio = 1;
             if (_maxValue != 0)
             {
                 ratio = 1 - value/_maxValue;
             }
-            CGPoint point = CGPointMake(xPosition + j*_xLabelWidth,
-                                        ((containerViewHeight - _rowHeight) * ratio) + _rowHeight/2.0);
+//            CGPoint point = CGPointMake(xPosition + j*_xLabelWidth,
+//                                        ((containerViewHeight - _rowHeight) * ratio) + _rowHeight/2.0);
+            CGPoint point;
+            if (ratio == 1)
+            {
+                point = CGPointMake(xPosition + j*_xLabelWidth,
+                                            ((containerViewHeight) * ratio));
+            }
+            else
+            {
+                point = CGPointMake(xPosition + j*_xLabelWidth,
+                                            ((containerViewHeight) * ratio)+_rowHeight/2.0);
+            }
             
             UIView * pointView = [UIView new];
             pointView.frame = CGRectMake(0, 0, 6, 6);
