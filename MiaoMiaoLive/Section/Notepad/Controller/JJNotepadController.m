@@ -105,6 +105,17 @@
     else
     {
 //        _textView.text = [_textView.text stringByAppendingString:resu];
+        
+        if (_editNotepad.titleText.isFirstResponder)
+        {
+            DLog(@"titleText focused");
+            _editNotepad.titleText.text = [_editNotepad.titleText.text stringByAppendingString:resu];
+        }
+        else if (_editNotepad.contentText.isFirstResponder)
+        {
+            DLog(@"contentText focused");
+            _editNotepad.contentText.text = [_editNotepad.contentText.text stringByAppendingString:resu];
+        }
     }
 }
 

@@ -296,6 +296,7 @@
         _containerView.delegate = self;
         _containerView.tag = 1;
         _containerView.bounces = NO;
+        _containerView.showsHorizontalScrollIndicator = NO;
 //        _containerView.layer.borderWidth = 1;
 //        _containerView.layer.borderColor = [UIColor lightGrayColor].CGColor;
     }
