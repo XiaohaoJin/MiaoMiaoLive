@@ -51,7 +51,7 @@
 {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor colorWithHexString:@"eeeeee"];
+    self.view.backgroundColor = [UIColor colorWithHexString:@"EEEEEE"];
     self.edgesForExtendedLayout = NO;
     self.navigationItem.title = @"喵喵账本";
     _dataMoneyArray = [NSMutableArray array];

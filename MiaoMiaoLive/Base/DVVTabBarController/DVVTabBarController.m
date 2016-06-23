@@ -72,9 +72,9 @@
     
 //    self.backgroundImage = [UIImage imageNamed:@"tabBar_background"];
     
-    self.iconNormalArray = @[ @"ic_tab_home", @"ic_tab_home", @"ic_tab_voice" ];
+    self.iconNormalArray = @[ @"ic_bill", @"ic_notepad", @"ic_bill" ];
     
-    self.iconSelectedArray = @[ @"ic_tab_home", @"ic_tab_home", @"ic_tab_voice" ];
+    self.iconSelectedArray = @[ @"ic_bill", @"ic_notepad", @"ic_bill"  ];
     
     self.itemBackgroundNormalArray = @[ @"", @"", @"" ];
     

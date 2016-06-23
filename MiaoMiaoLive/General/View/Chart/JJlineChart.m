@@ -34,12 +34,11 @@
         _xLabelWidth = 30;
         _rowNum = 5;
         
+        [self addSubview:self.containerView];
         [self addSubview:self.xTitleView];
         [self addSubview:self.yTitleView];
-        [self addSubview:self.containerView];
         
         [self configFrame];
-     
     }
     return self;
 }
@@ -85,7 +84,6 @@
     {
         [itemView removeFromSuperview];
     }
-
     
     _xTitleView.contentSize = CGSizeMake(_xLabelWidth * _xTitleArray.count, 0);
     _containerView.contentSize = CGSizeMake(_xLabelWidth * _xTitleArray.count, 0);
@@ -117,13 +115,11 @@
         yTitleLabel.font = [UIFont systemFontOfSize:12];
         [_yTitleView addSubview:yTitleLabel];
         
-        
-        
         /**
          *  在scrollerview上面设置标线
          */
         UIView * line = [[UIView alloc] init];
-        line.frame = CGRectMake(0, (i+1)*_rowHeight-1, self.containerView.contentSize.width, 1);
+        line.frame = CGRectMake(0, _rowHeight/2.0 + i*_rowHeight, self.containerView.contentSize.width, 1);
         line.backgroundColor = [UIColor lightGrayColor];
         [self.containerView addSubview:line];
         
@@ -188,19 +184,9 @@
             {
                 ratio = 1 - value/_maxValue;
             }
-//            CGPoint point = CGPointMake(xPosition + j*_xLabelWidth,
-//                                        ((containerViewHeight - _rowHeight) * ratio) + _rowHeight/2.0);
-            CGPoint point;
-            if (ratio == 1)
-            {
-                point = CGPointMake(xPosition + j*_xLabelWidth,
-                                            ((containerViewHeight) * ratio));
-            }
-            else
-            {
-                point = CGPointMake(xPosition + j*_xLabelWidth,
-                                            ((containerViewHeight) * ratio)+_rowHeight/2.0);
-            }
+            CGPoint point = CGPointMake(xPosition + j*_xLabelWidth,
+                                        ((containerViewHeight - _rowHeight) * ratio) + _rowHeight/2.0);
+        
             
             UIView * pointView = [UIView new];
             pointView.frame = CGRectMake(0, 0, 6, 6);
@@ -273,6 +259,7 @@
     if (!_yTitleView)
     {
         _yTitleView = [UIView new];
+        _yTitleView.backgroundColor = [UIColor colorWithHexString:@"EEEEEE"];
     }
     return _yTitleView;
 }

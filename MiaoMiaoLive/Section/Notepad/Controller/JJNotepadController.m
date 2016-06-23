@@ -104,8 +104,6 @@
     }
     else
     {
-//        _textView.text = [_textView.text stringByAppendingString:resu];
-        
         if (_editNotepad.titleText.isFirstResponder)
         {
             DLog(@"titleText focused");
