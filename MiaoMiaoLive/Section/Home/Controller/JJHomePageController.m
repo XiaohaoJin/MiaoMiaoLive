@@ -20,7 +20,7 @@
 
 
 #define TableHeadViewHeight ScreenWidth*0.5
-
+ 
 @interface JJHomePageController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UIBarButtonItem *barBtnItem;
